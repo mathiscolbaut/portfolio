@@ -1,20 +1,113 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ParcourCertifController!{% endblock %}
+{% block title %}{{parent()}}Parcours certification{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<section class="py-4 py-xl-5">
+    <div class="container">
+        <div class="text-center p-4 p-lg-5" style="margin-bottom: -50px;padding-bottom: 120px;">
+            <p class="fw-bold text-primary mb-2"></p>
+            <h1 class="fw-bold mb-4">Parcours certification</h1>
+            <p class="w-lg-50"><br /><span style="color: rgb(32, 33, 36);">« </span><strong><span style="color: rgb(32, 33, 36);">Parcours</span></strong><span style="color: rgb(32, 33, 36);"> de </span><strong><span style="color: rgb(32, 33, 36);">certification</span></strong><span style="color: rgb(32, 33, 36);"> complémentaire »Cette épreuve orale de 20 minutes sans préparation évalue la démarche entreprise par la personne candidate pour acquérir des compétences complémentaires lui permettant d&#39;enrichir son </span><strong><span style="color: rgb(32, 33, 36);">parcours</span></strong><span style="color: rgb(32, 33, 36);"> en vue de son insertion ou évolution professionnelle.</span><br /><br /></p>
+        </div>
+    </div>
+</section>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/portfolio/portfolio/src/Controller/ParcourCertifController.php'|file_link(0) }}">src/Controller/ParcourCertifController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/portfolio/portfolio/templates/parcour_certif/index.html.twig'|file_link(0) }}">templates/parcour_certif/index.html.twig</a></code></li>
-    </ul>
+<div class="container py-4 py-xl-5">
+    <div class="row mb-5">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+            <h2>Certification Obtenu </h2>
+        </div>
+    </div>
+    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+        <div class="col">
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-bell" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                        </svg></div>
+                    <h4 class="card-title">SecNum académie ANSSI</h4>
+                    <p class="card-text">Le MOOC de l'ANSSI a été lancé en mai 2017 dans un objectif de sensibiliser le plus grand nombre d'individus aux enjeux de la cybersécurité. Il compte aujourd'hui plus de 200 000 apprenants et apprenantes et 35 000 attestations de réussite ont été délivrées. Sa plateforme va évoluer le 1er juillet 2021.</p>
+                    <p class="card-text"> Emise en septembre 2022</p>
+                 
+                    <a class="btn btn-primary" type="button" target="_blank" href="http://localhost/portfolio/assets/secnum.pdf">Voir la Certification</a> 
+                </div>
+            </div>
+        </div>
+            <div class="col">
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-bell" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                        </svg></div>
+                    <h4 class="card-title">L'essentiel de Windows server 2019</h4>
+                    <p class="card-text">En résumé Windows Server est un système d'exploitation dédié aux services et à la mise en réseau. Il existe de nombreuses éditions et distributions de Windows Server 2019 (tout comme pour toutes les autres versions).</p>
+                    <p class="card-text"> Emise en octobre 2021</p>
+                 
+                    <a class="btn btn-primary" type="button" target="_blank" href="http://localhost/portfolio/assets/windowsServer.pdf">Voir la Certification</a> 
+                </div>
+            </div>
+        </div>
+            <div class="col">
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-bell" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                        </svg></div>
+                    <h4 class="card-title">L'essentiel de Teams</h4>
+                    <p class="card-text">Microsoft Teams est une application de collaboration conçue pour un travail hybride qui vous permet à vous et votre équipe de rester informés, organisés et connectés, le tout au même endroit. </p>
+                    <p class="card-text">Emise en septembre 2021</p>
+                 
+                    <a class="btn btn-primary" type="button" target="_blank" href="http://localhost/portfolio/assets/teams.pdf">Voir la Certification</a> 
+                </div>
+            </div>
+        </div>
+              
+            <div class="col">
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-bell" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                        </svg></div>
+                    <h4 class="card-title">Les fondements de l'IA</h4>
+                    <p class="card-text"> L'Intelligence Artificielle (IA) est un domaine de l'informatique qui vise à créer des machines capables de simuler l'intelligence humaine. Les fondements de l'IA reposent sur plusieurs domaines de recherche, tels que la logique, la psychologie, la linguistique, la philosophie et les mathématiques.</p>
+                    <p class="card-text">Emise en septembre 2021 </p>
+                 
+                    <a class="btn btn-primary" type="button" target="_blank" href="http://localhost/portfolio/assets/ia.pdf">Voir la Certification</a> 
+                </div>
+            </div>
+            </div> 
+            <div class="col">
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-bell" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                        </svg></div>
+                    <h4 class="card-title">Les fondements de la sécurité informatique</h4>
+                    <p class="card-text">Fondements de la sécurité informatique
+L'intégrité : garantir que les données sont bien celles que l'on croit être. La disponibilité : maintenir le bon fonctionnement du système d'information. La confidentialité : rendre l'information inintelligible à d'autres personnes que les seuls acteurs d'une transaction. </p>
+                    <p class="card-text">Emise en Septembre 2021</p>
+                 
+                    <a class="btn btn-primary" type="button" target="_blank" href="http://localhost/portfolio/assets/secinfo.pdf">Voir la Certification</a> 
+                </div>
+            </div>
+        </div>
+              
+            <div class="col">
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-bell" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                        </svg></div>
+                    <h4 class="card-title">Les fondamentaux du Python</h4>
+                    <p class="card-text"> À quoi sert Python ? L'un des principaux cas d'usage de Python est le script et l'automatisation. Ce langage peut par exemple remplacer les scripts shell, mais permet aussi d'automatiser les interactions avec les navigateurs web ou les interfaces graphiques des applications.</p>
+                    <p class="card-text">Emise non officiel (cours suivi preuve en PDF mais certification payante).</p>
+                 
+                    <a class="btn btn-primary" type="button" target="_blank" href="http://localhost/portfolio/assets/python.pdf">Voir la Certification</a> 
+                </div>
+            </div>
+        </div>
+        </div>
 </div>
+
 {% endblock %}
