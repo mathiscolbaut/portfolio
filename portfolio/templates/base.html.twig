@@ -17,13 +17,12 @@
                 "navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div id="navcol-5" class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">A Propos de moi</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/btsSio">BTS SIO?</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/veille">Veille</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/atelierPro">Situation Pro</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/parcourCertif">Parcours Certifications</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/cv">CV</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path("app_c_v") }}">A Propos de moi</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path("app_bts_sio") }}">BTS SIO?</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path("app_veille") }}">Veille</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path("app_atelier_pro") }}">Situation Pro</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path("app_parcour_certif") }}">Parcours Certifications</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ path("app_contact") }}">Contact</a></li>
             </ul>
         </div>
     </div>
