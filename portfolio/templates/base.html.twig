@@ -16,16 +16,26 @@
                 </svg></span><span>Mathis Colbaut</span></a><button class=
                 "navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div id="navcol-5" class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="{{ path("app_c_v") }}">A Propos de moi</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{{ path("app_bts_sio") }}">BTS SIO?</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{{ path("app_veille") }}">Veille</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{{ path("app_atelier_pro") }}">Situation Pro</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{{ path("app_gestion_patrimoine") }}">Gestion du Patrimoine</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{{ path("app_parcour_certif") }}">Parcours Certifications</a></li>
-                 <li class="nav-item"><a class="nav-link active" href="{{ path("app_documentations") }}">Documentations</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{{ path("app_contact") }}">Contact</a></li>
+          <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="{{ path("app_c_v") }}">A Propos de moi</a></li>
+        <li class="nav-item"><a class="nav-link active" href="{{ path("app_bts_sio") }}">BTS SIO</a></li>
+        <li class="nav-item"><a class="nav-link active" href="{{ path("app_veille") }}">Veille</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Situation Pro
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Stage Maximilien Robespierre</a></li>
+            <li><a class="dropdown-item" href="#">Alternance AMO </a></li>
+            <li><a class="dropdown-item" href="#">Marie Team</a></li>
             </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="{{ path("app_gestion_patrimoine") }}">Gestion du Patrimoine</a></li>
+        <li class="nav-item"><a class="nav-link active" href="{{ path("app_parcour_certif") }}">Parcours Certifications</a></li>
+        <li class="nav-item"><a class="nav-link active" href="{{ path("app_documentations") }}">Documentations</a></li>
+        <li class="nav-item"><a class="nav-link active" href="{{ path("app_contact") }}">Contact</a></li>
+        </ul>
+
         </div>
     </div>
 </nav>
