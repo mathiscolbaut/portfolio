@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Robespierre Lens{% endblock %}
+
+{% block body %}
+<section class="py-4 py-xl-5">
+
+        <div class="border rounded border-0 d-flex flex-column justify-content-center align-items-center p-4 py-5" style="background: linear-gradient(rgba(0,123,255,0.2), rgba(0,123,255,0.2)), url('/assets/robes.jpeg') center / cover;height: 500px;">
+            <div class="row">
+                <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
+                    <div>
+                        <h1 class="text-uppercase fw-bold mb-3">Stage Lycée maximilien de robespierre</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+</section>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 rounded border p-3"> <h4 style="text-align : center;">Contexte</h4>
+        <p>Lors de ma première année de BTS j'ai efféctuer mon stage au lycée Robespierre de Lens.
+        Mon tuteur été mon ancien professeur de réseaux monsieur Ludovic Lecocq.
+        Sa demande été de refaire entièrement la visite virtuelle du lycée qui devenait beaucoup trop ancienne et de moins en moins fonctionnelle.
+        Il venait égallement de recevoir 2 oculus quest 2 et il voulait égallement si j'en avais le temp lui adapter ma nouvelle visite sur son oculus. Ce que j'ai réussi!</p>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+       
+        
+        <div class="col-md-4 rounded border p-3"><h4>Cahier des charges</h4>
+        <p>Forcément un project informatique demande un cahier des charges!
+        Monsieur Lecocq m'a donner ce qu'il voulait, c'est contraite.
+        <ul>
+            <li>Etre disponible sur le web</li>
+            <li>Etre responsive (utilisable sur mobile)</li>
+            <li>Etre optimiser pour charger très vite (une contraite qui ma plusieurs fois poser problème)</li>
+            <li>Etre très simple d'utilisation</li>
+            <li>Avoir toute les salles dans la visite (ce qui n'était pas le cas dans l'ancienne).</li>
+            <li>Il voulait égallement des vidéos intégrer dans la visite virtuelle</li>
+        </ul>
+        </div>
+        
+        <div class="col-md-7 rounded border p-3" style="margin-left:5%"><h4>Comment Faire?</h4>
+            <p>Après avoir eu un cahier des charges plutôt précis il me fallait savoir comment j'allais réaliser la visite virtuelle.
+            Pour celà j'ai dabord commencer par faire de la veille sur les différentes façons de faire celà.</p>
+
+            <p>J'ai trouvé une vidéos qui ma permis de m'orienter sur quel technologies j'allais choisir.</p>
+            </p>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/i13G4v6NtGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>Après m'être bien renseigner sur le moteur Unity j'ai décider de choisir cette technologie, car elle correspondait totalement à la demande</p>
+            <p>Unity est un moteur de jeux qui me permet une grande élasticiter sur les platforms qu'il supporte, sur ce que l'on peux faire avec ext...</p>
+            <p>Unity m'offre ici la technologies qu'il me fallait WEBGL <img src="{{ asset('/assets/webGL.png') }}" width="40%" height="40%"> </p>
+
+            <p>Grâce à WebGL, les développeurs peuvent créer des jeux, des visualisations de données, des animations et des applications interactives avec des graphismes 3D
+            complexes qui <strong>fonctionnent directement dans le navigateur, sans nécessiter de téléchargement ou d'installation supplémentaire</strong>. Cela rend l'expérience utilisateur 
+            plus <strong>fluide</strong> et plus <strong>rapide</strong>, <strong>sans compromettre la qualité visuelle</strong>.</p>
+
+            <p>Maintenant que je suis rassurer sur les technologies à utiliser il faut maintenant installer tout ce que l'on aura besoin.</p>
+            <p>J'ai donc installer le moteur de jeux   <a href="https://store.unity.com/download" target="_blank">Unity</a>
+        
+            <p>Pour la visite virtuelle web j'ai utiliser la version 2022.2.0a17 c'était à l'époque une version Alpha mais avait une mise à jour importante sur les performances de WebGL
+            ce que n'avais pas la version stable que j'avais à la base utiliser et ou je me suis rendu compte des problèmes de performance est de compatibilité la version que j'avais utiliser
+            ne fonctionner pas sur safari par exemple. Alors que celle si oui!</p>
+            
+            <img src="{{ asset('/assets/unityVerWeb.png') }}" width="650px" height="400px">
+            
+
+        </div>
+    </div>
+</div>
+{% endblock %}
