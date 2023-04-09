@@ -3,6 +3,8 @@
 {% block title %}Robespierre Lens{% endblock %}
 
 {% block body %}
+
+ 
 <section class="py-4 py-xl-5">
 
         <div class="border rounded border-0 d-flex flex-column justify-content-center align-items-center p-4 py-5" style="background: linear-gradient(rgba(0,123,255,0.2), rgba(0,123,255,0.2)), url('/assets/robes.jpeg') center / cover;height: 500px;">
@@ -31,7 +33,7 @@
     <div class="row">
        
         
-        <div class="col-md-4 rounded border p-3"><h4>Cahier des charges</h4>
+        <div class="col-md-3 rounded border p-3"><h4>Cahier des charges</h4>
         <p>Forcément un project informatique demande un cahier des charges!
         Monsieur Lecocq m'a donner ce qu'il voulait, c'est contraite.
         <ul>
@@ -44,7 +46,7 @@
         </ul>
         </div>
         
-        <div class="col-md-7 rounded border p-3" style="margin-left:5%"><h4>Comment Faire?</h4>
+        <div class="col-md-8 rounded border p-3" style="margin-left:5%"><h4>Comment Faire?</h4>
             <p>Après avoir eu un cahier des charges plutôt précis il me fallait savoir comment j'allais réaliser la visite virtuelle.
             Pour celà j'ai dabord commencer par faire de la veille sur les différentes façons de faire celà.</p>
 
@@ -68,8 +70,80 @@
             ce que n'avais pas la version stable que j'avais à la base utiliser et ou je me suis rendu compte des problèmes de performance est de compatibilité la version que j'avais utiliser
             ne fonctionner pas sur safari par exemple. Alors que celle si oui!</p>
             
-            <img src="{{ asset('/assets/unityVerWeb.png') }}" width="650px" height="400px">
+            <img src="{{ asset('/assets/unityVerWeb.png') }}" width="800px" height="450px">
             
+            <p>Maintenant que j'ai un moteur utilisable j'étais presque prêt.</p>
+
+            <h3>1ère étape le contenu</h3>
+            <p>Dans se projet j'étais seule à tout gérer j'ai donc travailler en mode agile ou à chaque étape réaliser je voyais avec mon tuteur si celà lui correspondais car je n'avais
+            pas beaucoup de temp et je ne pouvais pas perdre mon temp à tout refaire.
+            Je parle dans cette étape de contenu et oui! J'ai du avant de développer jouer au photographe avec une Gopro 360° pour capturer les différentes salle.
+            Voici d'ailleur ma plaquette d'image que j'ai utiliser dans ma visite (la vous avez seulement les images que j'ai utiliser sinon on en avait plus de 150 ;)</p>
+
+            <img src="{{ asset('/assets/unityPhotoRobes.png') }}" width="800px" height="450px">
+            <br>
+            <p>Maintenant que les images sont faites j'ai pu commencer le développement. J'ai tout d'abord mis en place des sphères ou j'y ai mis leur texture (les images des salles).
+            comme vous pouvez le visualiser ci-dessous.
+            <img src="{{ asset('/assets/unityboule.png') }}" width="800px" height="450px">
+
+            <p>Maintenant que nous avons toutes nos salle de faites j'aimerais pouvoir naviguer dans ma visite virtuelle! Pour celà j'ai opter pour un système asser simple
+            tout d'abord une caméra qui sera nos yeux dans l'application et un système de pointeur à cliquer pour se déplacer dans les différentes salle et bien évidement un système
+            pour pouvoir bouger notre caméra avec notre souris pour pouvoir voir les détails du lycée.
+
+            J'ai donc créé un script pour les mouvements que j'ai nommé SC pour Scene Controller qui va être mis sur la caméra pour pouvoir faire suivre la caméra sur le pointeur
+            de la souris.
+
+    <pre><code class="language-csharp">
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class sc : MonoBehaviour
+{
+    public float rotationX;
+    public float rotationY;
+    public float sensitivity = 5f;
+  
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+       
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        
+
+        if (Input.GetKey(KeyCode.Space))
+            Cursor.lockState = CursorLockMode.None;
+
+        //Si notre souris n'est pas en dehors de la fenêtre unity alors
+        if (!isMouseOffScreen ())
+        {
+            if (Input.GetMouseButton(0))
+            {
+                rotationX -= Input.GetAxis("Mouse Y") * sensitivity;
+                rotationY += Input.GetAxis("Mouse X") * sensitivity;
+
+                rotationX = Mathf.Clamp(rotationX, -90, 90);
+
+                transform.rotation = Quaternion.Euler(rotationX, rotationY, 0);
+
+            }
+
+        }
+ 
+    }
+
+    private bool isMouseOffScreen()
+    {
+        if (Input.mousePosition.x <= 2 || Input.mousePosition.y <= 2 || Input.mousePosition.x >= Screen.width - 2 || Input.mousePosition.y >= Screen.height - 2)
+            return true;
+        return false;
+    }
+}
+
+</code></pre>
 
         </div>
     </div>
