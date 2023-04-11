@@ -92,7 +92,16 @@
 
             J'ai donc créé un script pour les mouvements que j'ai nommé SC pour Scene Controller qui va être mis sur la caméra pour pouvoir faire suivre la caméra sur le pointeur
             de la souris.
+            Voici le code est une explication brêve.</p>
 
+            <ul>
+            <li>Permet de contrôler la caméra à la première personne d'un objet de jeu Unity</li>
+            <li>Permet de regarder autour de soi en déplaçant la souris</li>
+            <li>Confinement du curseur de la souris à l'intérieur de la fenêtre de jeu pour éviter les mouvements indésirables</li>
+            <li>Variables "rotationX" et "rotationY" pour contrôler l'orientation de la caméra en fonction des mouvements de la souris</li>
+            <li>Variable "sensitivity" pour ajuster la vitesse de rotation de la caméra</li>
+            <li>La fonction "isMouseOffScreen" vérifie si le curseur de la souris est en dehors de la fenêtre de jeu pour éviter que la caméra ne tourne de manière incontrôlable</li>
+            </ul> 
     <pre><code class="language-csharp">
 using System.Collections;
 using System.Collections.Generic;
@@ -148,4 +157,7 @@ public class sc : MonoBehaviour
         </div>
     </div>
 </div>
+
+
+
 {% endblock %}
