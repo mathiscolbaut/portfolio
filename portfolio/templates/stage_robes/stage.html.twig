@@ -153,7 +153,83 @@ public class sc : MonoBehaviour
 }
 
 </code></pre>
+<br>
+<p> Maintenant que nous pouvons voir autour de nous, et les détails de nos salles.
+Il faut à tout pris pouvoir se déplacer dans chaque salle.</p>
 
+<p> Pour celà j'ai opter pour un système simple avoir des pointeurs à cliquer avec un nom qui apparait quand on passe la souris dessus 
+pour voir le nom des salles.</p>
+<img src="{{ asset('/assets/pointeur.png') }}" width="800px" height="650px">
+</br></br>
+<p>Pour se faire, chaque pointeur à un Box collider c'est ce qui va le rendre intéractif.
+Ensuite chaque pointeur à le script Onclick:
+<li>En résumé, ce code définit une classe qui permet de jouer une animation, de modifier le texte affiché et de téléporter la caméra du joueur à une position donnée lorsqu'un utilisateur clique sur un objet spécifique.
+<p>Chaque pointeur à la coordonnée de la sphère correspondant.
+<img src="{{ asset('/assets/pointeurClick.png') }}" width="800px" height="650px">
+<p>Maintenant que nous avons une visite ou nous pouvons nous déplacez, regardez autour de nous.
+Il nous manquez la lecture de vidéo dans certaine salle qui sont les fillières du lycée.
+Pour ce faire j'ai utiliser des vidéos player qui ont l'url de la vidéo qu'ils doivent lancé.
+maintenant il a fallu lancer tel ou tel vidéo celon dans quelle salle nous allions pour celà
+plusieurs étape.
+    <li>Chaque vidéo player à l'url de la vidéo qu'il doit lancé</li>
+    <li>les Vidéos player sont dans des préfabs Canvas pour qu'ils soit tous identique avec un fond Rouge et un titre</li>
+    <li>Les pointeurs qui amêne dans une salle ou il y a une vidéo on un script pour lancé la vidéo il permet de la lancer quand la propriété StartOrStop est cocher et 
+    donc pour arrêter la vidéo sur les pointeurs ou l'on sort de la salle on met la propriété StartOrStop décocher. Ce qui permet de lancer ou stoper la vidéo.
+    <pre><code class="language-csharp">
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Video;
+
+
+public class lauchVideo : MonoBehaviour
+{
+
+    public VideoPlayer videoConcerne;
+
+    public bool StartOrStop;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+    private void OnMouseDown()
+    {
+        if (StartOrStop)
+        {
+            startVideo();
+        }
+        else
+        {
+            stopVideo();
+        }
+    }
+    
+       
+    public void startVideo()
+    {
+        videoConcerne.Play();
+    }
+    
+    public void stopVideo()
+    {
+        videoConcerne.Stop();
+
+    }
+
+}
+</code></pre>
+</li>
+<br><br>
+<p>Ce qui nous donnes à la fin une très belle hiérarchie que j'ai au mieux trier.
+<br><br>
+<img src="{{ asset('/assets/hierarchyUnity.png') }}" width="400" height="850">
         </div>
     </div>
 </div>
