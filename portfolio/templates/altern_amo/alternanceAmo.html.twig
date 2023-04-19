@@ -161,14 +161,43 @@ Des solutions dédiées aux opérationnels de maintenance et de production (TPM)
                     <img src="{{ asset('/assets/amo/wikiCindy.png') }}" width="100%" height="20%"></img>
                 </a>
                   </br></br></br>
-                <h4 id="section4">4) Cahier des charges Project Comptage Particules / veille concurenciel </h4>
-                <p>Début Janvier nous avons commencez </p>
-
+                <h4 id="section4">4) Project Comptage Particules et Installation, déploiement de Grafana, mysql et API REST </h4>
+                <h5>4.1 Gestion de Project</h5>
+                <p>En début d'année, nous avons entamé un projet novateur nommé "Comptage particules connecté" avec notre équipe de développement, 
+                l'équipe chargée des automates de lubrification et notre patron. L'objectif de ce projet est de permettre à nos clients et à AMO de 
+                superviser l'état de l'huile de leurs machines à distance grâce à un boîtier doté d'un circuit d'huile et d'un capteur. Ce capteur renvoie 
+                la "classe de propreté" de l'huile, qui nous permet de déterminer la propreté de l'huile à distance.</p>
+                
+                <h5>La complexité de ce projet a rendu l'organisation primordiale, étant donné que notre équipe de développeurs et les automaticiens ne maîtrisaient pas bien
+                 le domaine de la lubrification et le nôtre respectivement.</h5>
+                
+                <p>Nous avons effectuer plusieurs réunion pour le suivi du project et nous avons sortie au bout de deux réunion un cahier des charges complet et précis.</p>
+                </br>
+                <a href="{{ asset('/assets/amo/boitierCapteur.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/boitierCapteur.png') }}" width="30%" height="20%"></img>
+                </a>  
+                   <a href="{{ asset('/assets/amo/recupData.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/recupData.png') }}" width="69%" height="100%"></img>
+                </a>  
+                </br></br></br>
+                <a href="{{ asset('/assets/amo/particuleReunion.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/particuleReunion.png') }}" width="100%" height="20%"></img>
+                </a>
+                
                 <embed  src="{{ asset("assets/amo/CDC projet comptage particules.pdf")}}" width=100% height=900 type='application/pdf'/>
+                </br></br>
+                <h5>4.2 Mettre à disposition des utilisateurs un service informatique </h5>
+                <p>Après la réalisation du cahier des charges et la prise en compte des besoins exprimés, la décision a été prise d'utiliser Grafana, 
+                MySQL et une API REST pour le premier jet du projet.</p>
 
+                <p>J'ai pris en charge l'installation et le déploiement de la base de données MySQL ainsi que du serveur Grafana qui nous permettra d'afficher des jauges en direct
+                    en reliant la base de données MySQL. De plus, j'ai commencé à développer une API REST avec Asp.NET, afin de pouvoir envoyer les données depuis l'automate via
+                    l'URL de l'API en mode POST.</p>
+
+                <embed  src="{{ asset("assets/amo/Api Particule.pdf")}}" width=100% height=900 type='application/pdf'/>
                 <h4 id="section5">5) Pop Up de diagnostic pour l'application Mobile </h4>
                 <h4 id="section6">6) Veille technologique SQLITE + réalisation d'un POKE </h4>
-                  <h4 id="section3">3) Grafana </h4>
+            
                
                 
                  
