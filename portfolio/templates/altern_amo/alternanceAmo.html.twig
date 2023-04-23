@@ -91,10 +91,9 @@ Des solutions dédiées aux opérationnels de maintenance et de production (TPM)
                 peut être utilisée pour une grande variété de projets logiciels, allant des petits projets personnels aux grandes entreprises.</p>
                 <p> Pour nous DevOps de Azure nous permet de s'organiser en fiche à réaliser pour travailler en mode Scrum et Kanban avec des sprints qui corresponde au différence fiches.
                 <a href="https://dev.azure.com/source0935/AMO/_boards/board/t/AMO%20Team/Stories" target="blank">DevAzure AMO</a>
-
-                <img src="{{ asset('/assets/amo/modeProject.png') }}" width="100%" height="100%">
-                <a href="{{ asset('/assets/amo/kanban.jpg') }}" target="_blank">
-                    <img src="{{ asset('/assets/amo/kanban.jpg') }}" width="100%" height="100%"></img>
+                <h4 style="text-align: center; color: red;">Méthode Kanban</h4>
+                 <a href="{{ asset('/assets/amo/Kanban+.jpg') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/kanban+.jpg') }}" width="100%" height="100%"></img>
                 </a>
 
                 <p>Ici par exemple voici ce que j'appellerais le tableau de bord de l'avancer de nos tâches à réaliser entre moi et Cindy.
@@ -185,6 +184,19 @@ Des solutions dédiées aux opérationnels de maintenance et de production (TPM)
                 </a>
                 
                 <embed  src="{{ asset("assets/amo/CDC projet comptage particules.pdf")}}" width=100% height=900 type='application/pdf'/>
+                <p>Compte rendu :
+                Permettre de transmettre les infos de l’automate vers Grafana en ligne via la 4G (Axel)
+                Quelle base de données pour stocker nos données sur Grafane en ligne ? (Axel ou/et Cindy)
+                Le calcul doit-il être fait par l’automate ou par le logiciel de supervision ?
+                L’automate peut-il recevoir une info venant du web (typiquement le paramétrage de fréquence d’envoi des données) ? (Axel)
+                Voir avec Steeve pour voir si notre logiciel AMO est capable de faire une supervision avec des graphiques ? (Cindy)
+                Analyser comment faire un « camembert » :
+                dans logiciel AMO (Cindy)
+                sur le mobile (en technologie windows et technologie android) (Mathis)
+                dans une page web, quelle techno existe-il ? (Mathis)
+                Paramétrer un « camembert » dans Grafana :
+                en ligne (Mathis)
+                en local avec la création d’une base de données locale  (Mathis)<p>
                 </br></br>
                 <h5>4.2 Mettre à disposition des utilisateurs un service informatique </h5>
                 <p>Après la réalisation du cahier des charges et la prise en compte des besoins exprimés, la décision a été prise d'utiliser Grafana, 
@@ -194,14 +206,72 @@ Des solutions dédiées aux opérationnels de maintenance et de production (TPM)
                     en reliant la base de données MySQL. De plus, j'ai commencé à développer une API REST avec Asp.NET, afin de pouvoir envoyer les données depuis l'automate via
                     l'URL de l'API en mode POST.</p>
 
+              
+                <a href="{{ asset('/assets/amo/preuveCommitParticule.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/preuveCommitParticule.png') }}" width="100%" height="20%"></img>
+                </a>
+                </br></br>
+                <h3>Installation de Mysql et Création de BDD</h3>
+                <p> J'ai tout d'abord installer mysql serveur sur le serveur windows de prod et j'y ai créé un script de création de la base de donnée 
+                pour le project.</p>
+                <a href="https://pastebin.com/raw/Maq7ShTx" target="blank">Script SQL</a>
+
+                <a href="{{ asset('/assets/amo/mysql.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/mysql.png') }}" width="100%" height="20%"></img>
+                </a>
+                </br></br>
+               <h3>Installation de Grafana serveur sur le serveur de Prod Windows</h3>
+               <p>L'installation de grafana est vraiment simple il sufis d'executer l'exe et de suivre les étapes d'installation
+               ensuite pour accèder à notre instence grafana il suffis de mettre l'ip de votre serveur :3000 n'oublier pas d'ouvrir le port 3000 pour un accès extérieur.</p>
+               <a href="https://grafana.com/docs/grafana/latest/setup-grafana/installation/windows/" target="blank">Documentation officiel d'installation.</a>
+
+                <a href="{{ asset('/assets/amo/grafanaInstall.png') }}" target="_blank">
+                <img src="{{ asset('/assets/amo/grafanaInstall.png') }}" width="100%" height="20%"></img>
+                </a>
+
+              <h3>Création de l'api pour ajouter les donnés de l'automate dans la DB.</h3>
+              <p>Mise en place d'un serveur IIS pour héberger l'api rest ASP.NET</p>
+                <a href="{{ asset('/assets/amo/IIS.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/IIS.png') }}" width="100%" height="20%"></img>
+                </a>
+                </br></br>
+              <h4>Création de l'api pour ajouter des valeurs en base</h4>
+  </br>
+             <a href="{{ asset('/assets/amo/connectBDD.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/connectBDD.png') }}" width="100%" height="20%"></img>
+                </a>
+                 <a href="{{ asset('/assets/amo/insert.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/insert.png') }}" width="100%" height="20%"></img>
+                </a>
+                 <a href="{{ asset('/assets/amo/insert.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/insert.png') }}" width="100%" height="20%"></img>
+                </a>
+                </br></br>
+              <h4>Petite documentation simple pour l'utilisation de l'api</h4>
                 <embed  src="{{ asset("assets/amo/Api Particule.pdf")}}" width=100% height=900 type='application/pdf'/>
+                </br></br>
+
+            <h4>Les utilisateurs peuvent désormer accéder à leur compte grafana.</h4>
+               <a href="{{ asset('/assets/amo/testGauge.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/testGauge.png') }}" width="100%" height="20%"></img>
+                </a>
+                 </br></br>
                 <h4 id="section5">5) Pop Up de diagnostic pour l'application Mobile </h4>
-                <h4 id="section6">6) Veille technologique SQLITE + réalisation d'un POKE </h4>
-            
-               
+                <p>Cette tâche qui m'a été demander permet de répondre à un problème que des clients nous ont remontée
+                à savoir que parfois la tablette ne se syncroniser pas. 
+                J'ai développer un menu qui leur permet de voir d'ou viens le problème exemple problème de connexion internet...
+                Se menu permet aussi en cas de plus gros problème d'envoyer un mail au support donc nous ou il y aura toutes les informations
+                envoyer à savoir Connexion internet, type de connexion, si il arrive à ping notre couchbase ext...</p>           
                 
-                 
-                
+                <a href="{{ asset('/assets/amo/preuve popupdignostic userstory.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/preuve popupdignostic userstory.png') }}" width="100%" height="20%"></img>
+                </a>
+                <a href="{{ asset('/assets/amo/popupUser.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/popupUser.png') }}" width="100%" height="20%"></img>
+                </a>
+                <a href="{{ asset('/assets/amo/popupAdmin.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/amo/popupAdmin.png') }}" width="100%" height="20%"></img>
+                </a>
         </div>
     </div>
 </div>
