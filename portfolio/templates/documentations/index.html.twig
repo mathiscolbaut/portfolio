@@ -3,5 +3,47 @@
 {% block title %}Hello DocumentationsController!{% endblock %}
 
 {% block body %}
+<br><br><br><br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card border-white border rounded shadow-lg" style="width: 230px;height: 450px;margin: 10px;margin-left: 15px;">
+                <div class="card-body" style="width: 205px;height: 400px;padding: 0px;margin: 10px;"><img class="d-lg-flex m-auto align-items-lg-center" src="{{ asset('/assets/haproxy.png') }}" style="width: 205px;height: 150px;margin-left: 0px;padding-left: 0px;" />
+                    <h4 class="card-title" style="margin-top: 5px;">HaProxy</h4>
+                    <h6 class="text-muted card-subtitle mb-2" style="margin-top: 0px;">Mise en place d'un serveur Haproxy</h6>
+                    <p class="card-text" style="width: 180px;margin-top: 15px;margin-bottom: 20px;">HAProxy est un logiciel permettant de répartir la charge de trafic réseau sur plusieurs serveurs.
+                    <div class="btn-group" role="group"><a href="{{ asset('/assets/Compte Rendu HAPROXY.pdf') }}" target="blanck" class="btn btn-primary" type="button" style="background-color: rgb(72,72,72);">Procédure</a></div>
+                </div>
+            </div>
+        </div>
+               <div class="col-md-3">
+            <div class="card border-white border rounded shadow-lg" style="width: 230px;height: 450px;margin: 10px;margin-left: 15px;">
+                <div class="card-body" style="width: 205px;height: 400px;padding: 0px;margin: 10px;"><img class="d-lg-flex m-auto align-items-lg-center" src="{{ asset('/assets/galera_cluster.jpg') }}" style="width: 205px;height: 100px;margin-left: 0px;padding-left: 0px;" />
+                    <br>
+                    <h4 class="card-title" style="margin-top: 5px;">Mariadb Galera Cluster </h4>
+                    <h6 class="text-muted card-subtitle mb-2" style="margin-top: 0px;">Mise en place d'une réplication Mariadb Galera Cluster </h6>
+                    <p class="card-text" style="width: 180px;margin-top: 15px;margin-bottom: 20px;">Galera Cluster permet la réplication pour assurer la haute disponibilité et la tolérance aux pannes.
+                    <div class="btn-group" role="group"><a href="{{ asset('/assets/Compte_Rendu_Galera_Cluster.pdf') }}" target="blanck" class="btn btn-primary" type="button" style="background-color: rgb(72,72,72);">Procédure</a></div>
+                </div>
+            </div>
+        </div>
+          <div class="col-md-6">
+            <div class="card border-white border rounded shadow-lg" style="width: 550px;height: 450px;margin: 10px;margin-left: 15px;">
+                <div class="card-body" style="width: 530px;height: 400px;padding: 0px;margin: 10px;"><img class="d-lg-flex m-auto align-items-lg-center" src="{{ asset('/assets/PictoGlpi.png') }}" style="width: 125px;height: 125px;margin-left: 0px;padding-left: 0px;" />
+                    <h4 class="card-title" style="margin-top: 5px;">GLPI </h4>
+                    <h6 class="text-muted card-subtitle mb-2" style="margin-top: 0px;">GLPI est un système de gestion de parc informatique et de Helpdesk open source. 
+                    <p class="card-text" style="width: 530px;margin-top: 15px;margin-bottom: 20px;"> Il permet de gérer l'inventaire du matériel et des logiciels, ainsi que de gérer les incidents, les demandes d'assistance et les problèmes liés à l'utilisation des équipements informatiques.
 
+GLPI peut être utilisé pour suivre l'historique des interventions sur les équipements, planifier les tâches de maintenance, gérer les licences de logiciels, et créer des rapports sur l'utilisation et les performances du parc informatique.
+
+                                                                                        </h6>
+                    <div class="btn-group" role="group"><a href="{{ asset('/assets/Install. Debian GLPI.pdf') }}" target="blanck" class="btn btn-primary" type="button" style="background-color: rgb(72,72,72);">Procédure</a></div>
+                </div>
+            </div>
+        </div>
+          
+    </div>
+</div>
+
+</div>
 {% endblock %}
