@@ -1,20 +1,117 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ApMarieTeamController!{% endblock %}
+{% block title %}Marie team{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/portfolio/portfolio/portfolio/src/Controller/ApMarieTeamController.php'|file_link(0) }}">src/Controller/ApMarieTeamController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/portfolio/portfolio/portfolio/templates/ap_marie_team/index.html.twig'|file_link(0) }}">templates/ap_marie_team/index.html.twig</a></code></li>
-    </ul>
+    <section>
+   <div style="height: 800px; display: flex; justify-content: center; align-items: center;">
+  <img src="{{ asset('/assets/MarieTeam/logo1.png') }}" style="max-width: 100%; max-height: 100%; margin: auto;">
 </div>
+
+    
+</section>
+<div class="container">
+    <div class="row">
+            <div class="col-md-12 rounded border p-3"> <h4 style="text-align : center;">Contexte</h4>
+            <p>MarieTeam est une entreprise de transport maritime qui assure la desserte de plusieurs îles du littoral français par délégation de service public. 
+            Elle propose deux services: le transport de voyageurs et le fret. Les liaisons sont organisées par secteur pour faciliter l'accès aux informations. 
+            Les tarifs dépendent de la liaison, de la période de voyage et du type de passager ou de véhicule transporté. Les horaires des traversées sont planifiés 
+            et les places disponibles sont affichées en temps réel pour éviter les réservations inutiles. Les internautes peuvent réserver en ligne et recevoir un numéro 
+            identifiant et un récapitulatif de leur réservation. VDEV, une ESN, a développé l'applicatif pour MarieTeam et envisage d'étendre ses activités en se tournant 
+            vers le marché des entreprises. Ils ont déjà un premier contrat en passe d'être finalisé avec MarieTeam.</p>
+            </div>
+    </div>
+        <br>
+    <div class="row">
+            <div class="col-md-3 rounded border p-3" style="height: 100%;"><h4></h4>
+                
+            </div>
+    
+            <div class="col-md-8 rounded border p-3" style="margin-left:5% ; height: 100%;">
+            <h4>Jalon 1: Mise en place du projet et analyse des données<h4>
+
+                <a href="https://trello.com/b/I3GOAG0R/apgaston-marieteam" target="blanck"> https://trello.com/b/I3GOAG0R/apgaston-marieteam </a>
+                <br> <br>
+                <a href="https://pastebin.com/raw/dRTgZteL" target="blanck"> Dictionnaire de données</a>
+                <br> <br>
+                <a href="https://pastebin.com/raw/QPr3ueEe" target="blanck"> Script de création de la db MYSQL</a>
+                <br> <br>
+               <p>MLD:</p>
+                <a href="{{ asset('/assets/MarieTeam/mld.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/MarieTeam/mld.png') }}" width="100%" height="20%"></img>
+                  </a>
+                    <br> <br>
+                <p>MCD:</p>
+                  <a href="{{ asset('/assets/MarieTeam/mcd.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/MarieTeam/mcd.png') }}" width="100%" height="20%"></img>
+                  </a>
+            
+            <h4>Jalon 2: Réalisation professionnelle 1 Application web de gestion de transport</h4>
+            <p>Une application web a été choisie puisqu’elle permet de s’adapter à l’hétérogénéité des solutions
+            techniques d'accès (STA) des clients. Cela peut être aussi bien des smartphones, des PC plus ou
+            moins performants, des tablettes. Enfin, ces STA fonctionnent sur des systèmes d’exploitation
+            différents (Windows, Linux, Androïd…).
+            Le gestionnaire de MarieTeam doit pouvoir avoir accéder aux mêmes fonctionnalités que les clients.
+            Il aura également accès à des fonctionnalités supplémentaires :
+            - Ajout ou modification des liaisons
+            - Consultation des statistiques sur réservations en ligne
+            Le gestionnaire souhaite connaître sur une période donnée, les informations suivantes : le chiffre
+            d’affaire, le nombre de passagers transportés, le nombre de passagers transportés par catégorie.
+            Ces informations sont confidentielles, des droits doivent donc être accordés, une gestion des droits
+            d’accès est à prévoir. Une authentification forte de tous les utilisateurs est à mettre en place.<p>
+
+            <h5>Le site internet est construit avec le framework Php Symfony qui nous permettra le travaille en mode MVC Ainsi que le rendeur de template Twig 
+            et doctrine ORM pour gérer la partie accès aux données ainsi qu'un serveur mysql et sont phpMyAdmin.</h5>
+            <a href="{{ asset('/assets/MarieTeam/doctrine.png') }}" target="_blank">
+                    <img src="{{ asset('/assets/MarieTeam/doctrine.png') }}" width="40%" height="20%"></img>
+                  </a>
+            <a href="{{ asset('/assets/MarieTeam/twig.png') }}" target="_blank">
+            <img src="{{ asset('/assets/MarieTeam/twig.png') }}" width="40%" height="20%"></img>
+            </a>
+              <br> <br>
+              <h5>Vue des secteurs:</h5>
+            <a href="{{ asset('/assets/MarieTeam/Secteur.png') }}" target="_blank">
+            <img src="{{ asset('/assets/MarieTeam/Secteur.png') }}" width="100%" height="20%"></img>
+            </a>
+             <h5>Vue des Liaisons:</h5>
+            <a href="{{ asset('/assets/MarieTeam/liaison.png') }}" target="_blank">
+            <img src="{{ asset('/assets/MarieTeam/liaison.png') }}" width="100%" height="20%"></img>
+            </a>
+             <h5>Vue des traversées:</h5>
+            <a href="{{ asset('/assets/MarieTeam/traverser.png') }}" target="_blank">
+            <img src="{{ asset('/assets/MarieTeam/traverser.png') }}" width="100%" height="20%"></img>
+            </a>
+             <h5>Vue des prix / détails de la reservation en cour:</h5>
+            <a href="{{ asset('/assets/MarieTeam/reservation.png') }}" target="_blank">
+            <img src="{{ asset('/assets/MarieTeam/reservation.png') }}" width="100%" height="20%"></img>
+            </a>
+                 <h5>Panel Admin / CRUD</h5>
+              <a href="{{ asset('/assets/MarieTeam/crud.png') }}" target="_blank">
+            <img src="{{ asset('/assets/MarieTeam/crud.png') }}" width="100%" height="20%"></img>
+            </a>
+            <br> <br>
+            <h4>Jalon 3: Réalisation professionnelle 2 : Création d’un client lourd pour l’édition de brochures</h4>
+
+            <p>MarieTeam veut faire une brochure PDF pour montrer les bateaux qu'elle utilise pour transporter les voyageurs. Tu dois automatiser cette brochure en utilisant
+             un logiciel objet avec des interfaces graphiques pour que le gestionnaire puisse facilement la modifier. Les données proviendront de l'application web et tu devras 
+             utiliser une classe Passerelle pour instancier les objets métiers et une classe JeuEnregistrement pour accéder à la base de données. Le logiciel créera le PDF en 
+             utilisant une procédure appelée BrochurePDF.</p>
+
+            <p>Pour ce faire la création d'une api rest avec Symfony à du être développer avec le composant serializer de Symfony.</p>
+
+
+            <a href="{{ asset('/assets/MarieTeam/crudpdf.png') }}" target="_blank">
+            <img src="{{ asset('/assets/MarieTeam/crudpdf.png') }}" width="100%" height="20%"></img>
+            </a>
+            </br></br>
+            <a href="{{ asset('/assets/MarieTeam/pdf.png') }}" target="_blank">
+            <img src="{{ asset('/assets/MarieTeam/pdf.png') }}" width="100%" height="20%"></img>
+            </a>
+         
+        </div>
+    </div>
+</div>
+
 {% endblock %}
